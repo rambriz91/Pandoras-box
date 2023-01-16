@@ -1,4 +1,4 @@
-// Assignment Code
+// Universal Variables and Arrays
 var generateBtn = document.querySelector("#generate");
 
 var lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -8,7 +8,7 @@ var specialChar = ['!','@','#','$','%','^','&','*','?','<','>','.','-','+','='];
 var charList = [];
 var password = "";
 
-//confirm fxn
+//confirm fxn fills in CharList
 function selectCharset() {
   if (confirm("Include lowercase characters?")) {
   charList = charList.concat(lowerCase);
@@ -27,9 +27,8 @@ function selectCharset() {
   }
 }
 
-//randomizer fnx
-
-function randomizer(passwordLength){
+//randomizer fxn
+function randomizer(passwordLength) {
   
   for (var i =0; i < passwordLength; i++) {
 password += charList[Math.floor(Math.random() * charList.length) ]
@@ -38,31 +37,30 @@ password += charList[Math.floor(Math.random() * charList.length) ]
   return password;
 }
 
-// Write password to the #password input
+// generate password fxn
 function generatePassword() {
    var passwordLength = window.prompt("Choose a password length of at least 8 characters and no nore than 128 characters");
     if (passwordLength >= 8 && passwordLength <= 128) {
       selectCharset();
       var randomPassword = randomizer(passwordLength);
+      alert("Password Generated");
    }
 
    else {
     alert("Password must be between 8-128 characters!");
 }
-    return randomPassword;
+    return password;
 }
-  // return "Password Generated"
 
+//writes password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-  alert("Password Generated")
 }
 
-// Add event listener to generate button
+// Event listener
 generateBtn.addEventListener("click", writePassword);
 
 
