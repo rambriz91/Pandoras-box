@@ -9,6 +9,7 @@ var charList = [];
 
 //confirm fxn fills in CharList
 function selectCharset() {
+  charList = [];
   if (confirm("Include lowercase characters?")) {
   charList = charList.concat(lowerCase);
   }
