@@ -13,7 +13,7 @@ This assignment required me to modify existing javascript code to create an appl
 
 ## Usage
 
-![Alt text](Develop/PasswordGen-Screenshot.png)
+![Alt text](Assets/PasswordGen-Screenshot.png)
 
 ## Credits
 
@@ -27,7 +27,7 @@ This assignment required me to modify existing javascript code to create an appl
 ## Links
 
 -   https://github.com/rambriz91/Pandoras-box
--   
+-   https://rambriz91.github.io/Pandoras-box/
 
 ## License
 
