@@ -64,9 +64,7 @@ function writePassword() {
 // Event listener
 generateBtn.addEventListener("click", writePassword);
 
-function resetList() {
-  charList = charList.splice(0,charList.length)
-}
+
 
 
 
